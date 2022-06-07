@@ -1,0 +1,29 @@
+.rightResume{
+    display: flex;
+    justify-content: right;
+    width: 45%;
+    
+}
+.resumeProjects{
+    padding-left: 5%;
+}
+
+.leftResume{
+    display: flex;
+    justify-content: left;
+    width: 45%;
+}
+
+.resume{
+    display: flex;
+    justify-content: center;
+}
+
+.line{
+    position: absolute;
+    height: 90%;
+    top: 30%;
+    bottom: 10%;
+    width:1px;
+    color:#FF4301;
+}
