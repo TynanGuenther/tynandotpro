@@ -10,7 +10,7 @@ routes:
   get "/":
     var content = newJObject()
     content["page_title"] = newJString("tynan.pro")
-    resp render(readFile("pages/index.html"),content)
+    resp render(readFile("public/pages/index.html"),content)
   #Resume Page
   get "/resume":
     var content = newJObject()
@@ -21,10 +21,14 @@ routes:
     var content = newJObject()
     content["page_title"] = newJString("About-Me")
     resp showPage("about", content)
-
+  #Software
   get "/software":
     var content = newJObject()
     content["page_title"] = newJString("Software")
     resp showPage("software", content)
-
+  #Blog
+  get "/blog":
+    var content = newJObject()
+    content["page_title"] = newJString("Blog")
+    resp showPage("blog", content)
 

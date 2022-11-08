@@ -2,10 +2,13 @@
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #2F2519;
-	color: #FA7D09;
+	background-image: url('../../static/mountain.jpg');	
 
 }
+a:link{
+	text-decoration:none;
+}
+	
   
 .topnav {
 	overflow: hidden;
@@ -15,6 +18,7 @@ body {
 .topnav a {
 	float: left;
 	color: #4A3F35;
+	background-color: transparent;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
