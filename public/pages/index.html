@@ -2,25 +2,60 @@
 <html>
 
 	<head>
+		<style>
+			html,body{
+				height:100%;
+				width:100%;
+				margin:0;
+			}
+			.outer{
+				display:flex;
+				height:100%;
+				width:100%;
+			}
+			.outer > div{
+				width:33%;
+				align:center;
+				background-repeat:no-repeat;
+				
+			}
+			.software{
+				background: url('../static/code.jpg');
+				background-size:cover;
+			}
+			
+			.software:hover{
+				background: url('../static/code.gif');
+				background-size: cover;
+			}
 
+			.resume{
+				background: blue;
+			}
+			.blog{
+				background: green;
+			}
+
+
+
+		</style>
 	</head>
 	<body>
 
-		<div>
-			<div id="about">
+		<div class="outer">
+
+			<div class="software">
+				<h1>help</h1>
+			</div>
+
+			<div class="resume">
+
+				<h1>please</h1>
+			</div>
+		
+			<div class="blog">
 				
-			</div>
-
-			<div id="software">
-
-			</div>
-
-			<div id="resume">
-				
-			</div>
-
-			<div id="blog">
-
+				<h2>help</h2>
 			</div>
 		</div>
 	</body>
