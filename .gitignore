@@ -10,4 +10,4 @@ posts/*.blog
 posts/*.post
 
 #ignore binary
-tynan
+*.bin
