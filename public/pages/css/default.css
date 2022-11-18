@@ -3,42 +3,39 @@ body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	background-image: url('../../static/mountain.jpg');	
+	background-size: cover;
+	background-repeat:no-repeat;
+	color: white;
 
 }
 a:link{
 	text-decoration:none;
 }
-	
+
+.main{
+	width: 40%;
+	margin: 0 auto;
+	font-size: 17pt;
+}
+.ml{
+	color:yellow;
+}	
   
 .topnav {
 	overflow: hidden;
-	background-color: #2F2519;
+	background-color: transparent;
 }
   
 .topnav a {
 	float: left;
-	color: #4A3F35;
 	background-color: transparent;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 10pt;
-	transition: all 0.7s ease-in-out;
-	font-family: 'Press Start 2P', cursive;
+	font-size: 17pt;
 }
   
-.topnav a:hover {
-	background-color: #4A3F35;
-	color: #FF4301;
-	transform: translate(5px, -5px);
-	font-family: 'Press Start 2P', cursive;
-	font-size: 12pt;
-	text-shadow: -1px 1px 0 #2F2519, -2px 2px 0 #2F2519,
-                -3px 3px 0 #2F2519, -4px 4px 0 #2F2519,
-                -5px 5px 0 #2F2519, -6px 6px 0 #2F2519,
-                -7px 7px 0 #2F2519,
-                0 20px 30px rgba(0, 0, 0, 0.5);
-}
+
 
 .navContainer{
 	display: flex;
@@ -48,10 +45,6 @@ a:link{
 
 .titleContainer{
 	padding-left: 20%;
-	font-family: 'Press Start 2P', cursive;
 }
   
-.topnav a.active {
-	background-color: #FF4301;
-	color: #EEEEEE;
-}
+

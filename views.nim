@@ -3,6 +3,8 @@ import misc
 import json
 from strutils import format
 
+import db_sqlite
+
 const GeneralTemplate = dedent """
 <!DOCTYPE html>
 <html>
@@ -21,18 +23,18 @@ const GeneralTemplate = dedent """
 			
 			<div class="navContainer">
 				<div class="topnav">
-					<a href="/about">About</a>
 					<a href="/resume">Resume</a>
-					<a href="/blog">Blog</a>
           <a href="/software">Software</a>
+					<a href="/blog">Blog</a>
 				</div>
 			</div>
     <header>
-    <div id="main">
+    <div class="main">
       {{{core_html}}}
+      
+      <hr style="color:white" width="100%">
     </div>
     <footer>
-      <hr style="color:white" width="100%">
       <center>
         <a href="https://github.com/TynanGuenther"><img src="static/github.png" alt="Github" width="30" height="30"></a>
         <p>If you want to see my code check out my Github</p>
@@ -46,7 +48,11 @@ const GeneralTemplate = dedent """
   """
 
 proc showPage*(pageFile:string, content:JsonNode):string=
-  let core = readFile("public/pages/$1.html".format(pageFile))
+  let db = open("blog.db","","","")
+
+  let core = readFile("public/pages/$1.txt".format(pageFile))
+  content["post_title"] = newJString(db.getRow(sql"SELECT title FROM Posts WHERE ID = ?", 4)[0])
   let coreRendered = render(core, content)
   content["core_html"] = newJString(coreRendered)
+
   result = render(GeneralTemplate , content)

@@ -1,0 +1,13 @@
+nimcache/
+nimblecache/
+htmldocs/
+
+#ignore database
+*.db
+
+#ignore blog
+posts/*.blog
+posts/*.post
+
+#ignore binary
+tynan
