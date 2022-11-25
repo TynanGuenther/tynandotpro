@@ -10,7 +10,7 @@ routes:
   get "/":
     var content = newJObject()
     content["page_title"] = newJString("tynan.pro")
-    resp showPage("post", content)
+    resp showPage("index", content)
   #Resume Page
   get "/resume":
     var content = newJObject()
