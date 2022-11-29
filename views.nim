@@ -96,12 +96,16 @@ proc showPage*(pageFile:string, content:JsonNode):string=
   content["core_html"] = newJString(coreRendered)
   result = render(GeneralTemplate , content)
 
-proc showPost*(pageFile:string, content:JsonNode):string=
-  let post = getPostFromID(2)
+proc showPost*(postID:int,content:JsonNode):string=
+  let post = getPostFromID(postID)
   content["title"] = newJString(post[1])
   content["date"] = newJString(post[2])
   content["content"] = newJString(post[3])
   result = render(BlogPostTemplate , content)
+
+proc blogPage*(content:JsonNode):string=
+  content["core_html"]= newJString(getAllPostsTitles())
+  result = render(GeneralTemplate, content)
 
 
 

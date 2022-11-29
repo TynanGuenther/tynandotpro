@@ -1,6 +1,5 @@
 import strutils
 import jester
-import moustachu
 import json
 
 import views
@@ -25,5 +24,4 @@ routes:
   get "/blog":
     var content = newJObject()
     content["page_title"] = newJString("Blog")
-    resp showPage("blog", content)
-
+    resp blogPage(content)
