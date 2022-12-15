@@ -1,7 +1,6 @@
-import strutils
 import jester
 import json
-
+from strutils import format
 import views
 
 routes:
@@ -25,3 +24,11 @@ routes:
     var content = newJObject()
     content["page_title"] = newJString("Blog")
     resp blogPage(content)
+  #Post
+  get "/blog/@post?":
+    var content = newJObject()
+    content["page_title"] = newJString("Blog/" & @"post")
+    resp showPost(@"post")
+
+
+
