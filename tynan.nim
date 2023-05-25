@@ -15,10 +15,11 @@ routes:
     content["page_title"] = newJString("Resume")
     resp showPage("resume", content)
   #Software
-  get "/software":
+#[  get "/software":
     var content = newJObject()
     content["page_title"] = newJString("Software")
     resp showPage("software", content)
+]#
   #Blog
   get "/blog":
     var content = newJObject()

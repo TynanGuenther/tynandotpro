@@ -5,7 +5,7 @@ import db
 import db_sqlite
 from strutils import format
 
-
+#<a href="/software">Software</a> for when software is ready
 const GeneralTemplate = dedent """
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,6 @@ const GeneralTemplate = dedent """
 			<div class="navContainer">
 				<div class="topnav">
 					<a href="/resume">Resume</a>
-          <a href="/software">Software</a>
 					<a href="/blog">Blog</a>
 				</div>
 			</div>
